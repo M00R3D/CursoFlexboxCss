@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de Flexbox</title>
     <style>
+        *,
+        *::after,
+        *::before{
+            box-sizing: border-box;
+        }
         .container{
             background-color: rgb(161, 103, 103);
             /* padding:1rem; */
-            display: inline-flex;
+            height:30vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
 
         .item{
             background-color: rgb(98, 197, 184);
+            border: thick solid #46a55b;
+            width:20%
         }
     </style>
 </head>
@@ -22,10 +32,33 @@
         <article class="item">item do</article>
         <article class="item">item tre</article>
     </section>
+    <br></br>
     <section class="container">
         <article class="item">item uno</article>
         <article class="item">item do</article>
         <article class="item">item tre</article>
+    </section>
+    <br></br>
+    <section class="container">
+        <article class="item">item1</article>
+        <article class="item">item2</article>
+        <article class="item">item3</article>
+        <article class="item">item4</article>
+        <article class="item">item5</article>
+        <article class="item">item6</article>
+        <article class="item">item7</article>
+        <article class="item">item8</article>
+        <article class="item">item9</article>
+        <article class="item">item10</article>
+        <article class="item">item11</article>
+        <article class="item">item12</article>
+        <article class="item">item13</article>
+        <article class="item">item14</article>
+        <article class="item">item15</article>
+        <article class="item">item16</article>
+        <article class="item">item17</article>
+        <article class="item">item18</article>
+        <article class="item">item19</article>
     </section>
 </body>
 </html>
