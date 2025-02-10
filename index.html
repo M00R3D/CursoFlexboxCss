@@ -19,20 +19,22 @@
             display: flex; /* Activa Flexbox */
 
             /* flex-direction controla la dirección de los elementos flexibles */
-            flex-direction: column-reverse; /* Los elementos se colocan en columna pero en orden inverso */
+            flex-direction: row; /* Los elementos se colocan en columna pero en orden inverso */
             /* flex-direction: row; */ /* Los elementos irían en fila (comentado) */
 
             /* justify-content alinea los elementos en el eje principal */
-            justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+            justify-content: space-between;
+             /* Distribuye los elementos con espacio entre ellos */
 
             /* flex-wrap controla si los elementos se ajustan en una sola línea o se envuelven */
-            flex-wrap: wrap-reverse; /* Permite que los elementos se envuelvan en múltiples líneas, pero en orden inverso */
+            flex-wrap: nowrap; /* Permite que los elementos se envuelvan en múltiples líneas, pero en orden inverso */
 
             /* align-items alinea los elementos en el eje transversal */
             /* align-items: baseline; */ /* Alinearía los elementos en relación con su línea base de texto (comentado) */
 
             /* align-content alinea las líneas cuando hay múltiples filas de elementos flexibles */
-            align-content: baseline; /* Alinea las filas de elementos con base en la línea base del texto */
+            /* align-content: stretch;  */
+            /* Alinea las filas de elementos con base en la línea base del texto */
 
             /* Posibles valores para justify-content:
                - center: centra los elementos
@@ -60,13 +62,22 @@
         .item {
             background-color: rgb(98, 197, 184); /* Color de fondo de los elementos */
             border: thick solid #46a55b; /* Borde grueso de color verde */
+            flex-grow: 0;
+            /* flex-grow es la capacidad que tienen los elementos de crecer para acomodarse mas al momento de que SOBRE espacio en el contenedor,
+            su valor por defecto es 0 y NO ACEPTA VALORES NEGATIVOS */
+            flex-shrink: 1;
+            /* flex-shrink es la capacidad que tienen los elementos de disminuir su tamaño para acomodarse mas al momento de que FALTE espacio en el contenedor,
+            su valor por defecto es 1 y NO ACEPTA VALORES NEGATIVOS */
+            flex-basis: auto;
+
             /* width:20%; */ /* Ancho del elemento (comentado) */
             /* height: 20%; */ /* Altura del elemento (comentado) */
         }
 
         /* Modifica el segundo elemento para que tenga un tamaño de fuente mayor */
         .item:nth-child(2) {
-            font-size: 150%;
+            /* font-size: 150%; */
+            flex-grow: 2;
         }
 </style>
 
@@ -78,6 +89,7 @@
         <article class="item">item tre</article>
     </section>
     <br></br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <section class="container">
         <article class="item">item uno</article>
         <article class="item">item do</article>
