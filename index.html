@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curso de Flexbox</title>
     <style>
-        /* Aplica el modelo de caja border-box a todos los elementos y sus pseudoelementos, 
-           asegurando que el padding y el borde no aumenten el tamaño total del elemento */
         *, 
         *::after, 
         *::before {
@@ -14,74 +12,34 @@
         }
 
         .container {
-            background-color: rgb(161, 103, 103); /* Color de fondo del contenedor */
-            height: 30vh; /* Altura del contenedor */
-            display: flex; /* Activa Flexbox */
+            background-color: rgb(161, 103, 103);
+            height: 30vh;
+            display: flex;
             width: 100%;
-            /* flex-direction controla la dirección de los elementos flexibles */
-            flex-direction: row; /* Los elementos se colocan en columna pero en orden inverso */
-            /* flex-direction: row; */ /* Los elementos irían en fila (comentado) */
-
-            /* justify-content alinea los elementos en el eje principal */
+            flex-direction: row;
             justify-content: space-between;
-             /* Distribuye los elementos con espacio entre ellos */
-
-            /* flex-wrap controla si los elementos se ajustan en una sola línea o se envuelven */
-            flex-wrap: nowrap; /* Permite que los elementos se envuelvan en múltiples líneas, pero en orden inverso */
-
-            /* align-items alinea los elementos en el eje transversal */
-            /* align-items: baseline; */ /* Alinearía los elementos en relación con su línea base de texto (comentado) */
-
-            /* align-content alinea las líneas cuando hay múltiples filas de elementos flexibles */
-            /* align-content: stretch;  */
-            /* Alinea las filas de elementos con base en la línea base del texto */
-
-            /* Posibles valores para justify-content:
-               - center: centra los elementos
-               - flex-start: los alinea al inicio
-               - flex-end: los alinea al final
-               - space-between: deja espacio entre los elementos
-               - space-around: deja espacio alrededor de cada elemento
-               - space-evenly: distribuye el espacio de manera uniforme */
-
-            /* Posibles valores para align-items:
-               - stretch: los estira para ocupar todo el espacio disponible
-               - center: los centra en el eje transversal
-               - flex-start: los alinea al inicio del eje transversal
-               - flex-end: los alinea al final del eje transversal
-               - baseline: los alinea según la línea base del texto */
-
-            /* Posibles valores para align-content (cuando hay múltiples líneas):
-               - stretch: estira las líneas para ocupar todo el espacio disponible
-               - center: centra las líneas en el eje transversal
-               - flex-start: las alinea al inicio del eje transversal
-               - flex-end: las alinea al final del eje transversal
-               - baseline: las alinea según la línea base del texto */
+            flex-wrap: wrap;
         }
 
         .item {
-            background-color: rgb(98, 197, 184); /* Color de fondo de los elementos */
-            border: thick solid #46a55b; /* Borde grueso de color verde */
-            flex-grow: 0;
-            /* flex-grow es la capacidad que tienen los elementos de crecer para acomodarse mas al momento de que SOBRE espacio en el contenedor,
-            su valor por defecto es 0 y NO ACEPTA VALORES NEGATIVOS */
-            flex-shrink: 1;
-            /* flex-shrink es la capacidad que tienen los elementos de disminuir su tamaño para acomodarse mas al momento de que FALTE espacio en el contenedor,
-            su valor por defecto es 1 y NO ACEPTA VALORES NEGATIVOS */
-            flex-basis: auto;
-
-            /* width:20%; */ /* Ancho del elemento (comentado) */
-            /* height: 20%; */ /* Altura del elemento (comentado) */
+            background-color: rgb(98, 197, 184);
+            border: thick solid #46a55b;
+            flex: 1 1 111px; /* Combina flex-grow, flex-shrink y flex-basis */
         }
 
-        /* Modifica el segundo elemento para que tenga un tamaño de fuente mayor */
+        /* Modifica el segundo elemento con un orden diferente y align-self */
         .item:nth-child(2) {
-            /* font-size: 150%; */
-            /* flex-grow: 2; */
-            flex-shrink: 3;
+            order: -1; /* Lo mueve al inicio sin alterar el HTML */
+            align-self: center; /* Alinea solo este elemento en el centro */
+            flex: 2 3 150px; /* Crece más y se encoge más */
         }
-</style>
 
+        /* Último elemento con un orden mayor y flex-basis diferente */
+        .item:last-child {
+            /* order: 2; Se mueve al final */
+            flex-basis: 200px; /* Ocupa más espacio inicial */
+        }
+    </style>
 </head>
 <body>
     <section class="container">
