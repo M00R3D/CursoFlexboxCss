@@ -3,39 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplos Practicos de FlexBox</title>
+    <title>Ejemplos Prácticos de Flexbox</title>
     <style>
-        *, 
-        *::after, 
-        *::before {
+        /* Reset de estilos */
+        *, *::after, *::before {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }   
-        body{
-            display:flex;
-            flex-direction:column;
-            min-height:100vh;
+        
+        /* Estructura principal */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
         }
-        main{
-            flex-grow:1;
+
+        main {
+            flex-grow: 1;
         }
-        .titulares{
+
+        /* Estilos generales */
+        .titulares {
             background-color: rgb(49, 49, 56);
-            color:#EEE;
-            padding:2rem;
+            color: #EEE;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Menú */
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .menu .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .menu ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        .menu ul li {
+            flex-grow: 1;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            /* width: 100%; */
+            min-height: 100vh;
+            background-image: url("https://imgs.search.brave.com/Ju1B4jJpvXWoO3-32wkaAs8GXSk9jbzmoASytDQmhZU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQw/NTk0NDAxL3Bob3Rv/L2JhbGFuY2luZy1j/YXQuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPUVFMVE4cDZZ/THBtRFk5RkJKYjZQ/SVFlNTdhcWpEeW53/cTA3MWNmdHNEVnM9");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Capa de superposición en la hero-image */
+        .hero-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
         }
 
     </style>
 </head>
 <body>
-    
+
     <header class="titulares">
-        <h2>Header</h2>
+        <nav class="menu">
+            <div class="logo">LOGO</div>
+            <ul>
+                <li><a href="#">Sección 1</a></li>
+                <li><a href="#">Sección 2</a></li>
+                <li><a href="#">Sección 3</a></li>
+                <li><a href="#">Sección 4</a></li>
+                <li><a href="#">Sección 5</a></li>
+                <li><a href="#">Sección 6</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
         <h2>Contenido</h2>
+        <div class="hero-image">
+            <div class="hero-content">
+                ¡Bienvenido a nuestra página!
+            </div>
+        </div>
     </main>
+
     <footer class="titulares">
         <h2>Footer</h2>
     </footer>
+
 </body>
 </html>
