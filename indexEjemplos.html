@@ -31,6 +31,16 @@
             padding: 2rem;
             text-align: center;
         }
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column; /* Cambia los links a columna */
+        align-items: center; /* Alinea los links al centro */
+    }
+    .menu .logo {
+        order: -1; /* Asegura que el logo esté a la izquierda */
+    }
+}
 
         /* Menú */
         .menu {
