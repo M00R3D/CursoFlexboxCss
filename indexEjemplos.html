@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos Practicos de FlexBox</title>
+    <style>
+        *, 
+        *::after, 
+        *::before {
+            box-sizing: border-box;
+        }   
+        body{
+            display:flex;
+            flex-direction:column;
+            min-height:100vh;
+        }
+        main{
+            flex-grow:1;
+        }
+        .titulares{
+            background-color: rgb(49, 49, 56);
+            color:#EEE;
+            padding:2rem;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <header class="titulares">
+        <h2>Header</h2>
+    </header>
+    <main>
+        <h2>Contenido</h2>
+    </main>
+    <footer class="titulares">
+        <h2>Footer</h2>
+    </footer>
+</body>
+</html>
