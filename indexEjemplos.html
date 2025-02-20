@@ -61,8 +61,9 @@
             gap: 15px;
         }
 
-        .menu ul li {
-            flex-grow: 1;
+        .menu li {
+            /* flex-grow: 1; */
+            padding: .5rem;
         }
 
         .menu ul li a {
@@ -97,7 +98,26 @@
             font-size: 2rem;
             font-weight: bold;
             text-align: center;
-            padding: 20px;
+            /* padding: .5rem; */
+            /* padding: 20px; */
+        }
+
+        .flex-container{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .flex-item{
+            flex: 0 0 50%;
+        }
+
+        .flex-order-1{
+            order: 1;
+        }
+        
+        .flex-reverse{
+            flex-direction: row-reverse;
         }
 
     </style>
@@ -120,11 +140,38 @@
 
     <main>
         <h2>Contenido</h2>
-        <div class="hero-image">
+        <article class="hero-image">
             <div class="hero-content">
                 ¡Bienvenido a nuestra página!
             </div>
-        </div>
+        </article>
+        <section class="flex-container">
+            <article class="flex-item">
+                <h2>Titulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur explicabo consectetur tempore perspiciatis rerum ipsam, exercitationem quod autem eos. Commodi quo dolorum ratione iusto, enim rem quidem ducimus quaerat delectus?</p>
+            </article>
+            <article class="flex-item">
+                <img src="https://placekittens.com/500/450" alt="" srcset="">
+            </article>
+        </section>
+        <section class="flex-container flex-reverse">
+            <article class="flex-item ">
+                <h2>Titulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur explicabo consectetur tempore perspiciatis rerum ipsam, exercitationem quod autem eos. Commodi quo dolorum ratione iusto, enim rem quidem ducimus quaerat delectus?</p>
+            </article>
+            <article class="flex-item">
+                <img src="https://placekittens.com/500/450" alt="" srcset="">
+            </article>
+        </section>
+        <section class="flex-container">
+            <article class="flex-item">
+                <h2>Titulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur explicabo consectetur tempore perspiciatis rerum ipsam, exercitationem quod autem eos. Commodi quo dolorum ratione iusto, enim rem quidem ducimus quaerat delectus?</p>
+            </article>
+            <article class="flex-item">
+                <img src="https://placekittens.com/500/450" alt="" srcset="">
+            </article>
+        </section>
     </main>
 
     <footer class="titulares">
