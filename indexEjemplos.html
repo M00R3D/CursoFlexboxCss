@@ -31,6 +31,18 @@
             padding: 2rem;
             text-align: center;
         }
+
+        .flex-responsive{
+            display: flex;
+            flex-flow: row wrap;
+            flex-wrap:wrap;
+        }
+
+        .flex-responsive-item{
+            border: thin solid rgb(184, 85, 85);
+            flex: 1 1 100px;
+            min-height: 30px;
+        }
 /* Estilo para pantallas pequeñas */
 @media (max-width: 768px) {
     .menu ul {
@@ -108,8 +120,14 @@
             align-items: center;
         }
 
+        .flex-container img{
+            padding-left: 10%;
+            width: 90%;
+            align-self: center;
+        }
+
         .flex-item{
-            flex: 0 0 50%;
+            flex: 1 1 50%;
         }
 
         .flex-order-1{
@@ -119,6 +137,8 @@
         .flex-reverse{
             flex-direction: row-reverse;
         }
+
+        
 
     </style>
 </head>
@@ -147,30 +167,59 @@
         </article>
         <section class="flex-container">
             <article class="flex-item">
-                <h2>Titulo</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur explicabo consectetur tempore perspiciatis rerum ipsam, exercitationem quod autem eos. Commodi quo dolorum ratione iusto, enim rem quidem ducimus quaerat delectus?</p>
+                <h2>El gato que conversa con su sombra</h2>
+                <p>Dicen que la soledad es un estado mental, pero este felino ha encontrado la manera de hacer amigos en la oscuridad. Con una pose de filósofo, parece estar debatiendo con su reflejo sobre el sentido de la vida... o sobre si la pared sabe a pollo.</p>
             </article>
             <article class="flex-item">
-                <img src="https://placekittens.com/500/450" alt="" srcset="">
+                <img src="https://i.pinimg.com/736x/22/63/42/22634290fc4ed9d26cd88e0b49013357.jpg" alt="" srcset="">
             </article>
         </section>
         <section class="flex-container flex-reverse">
             <article class="flex-item ">
-                <h2>Titulo</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur explicabo consectetur tempore perspiciatis rerum ipsam, exercitationem quod autem eos. Commodi quo dolorum ratione iusto, enim rem quidem ducimus quaerat delectus?</p>
+                <h2>El guardián del césped sagrado</h2>
+                <p>Majestuoso y pensativo, este gato domina su reino verde con la sabiduría de un monje y la paciencia de un cazador. Su mirada al cielo sugiere que está esperando una señal... o tal vez solo un pájaro despistado que se cruce en su camino.</p>
             </article>
             <article class="flex-item">
-                <img src="https://placekittens.com/500/450" alt="" srcset="">
+                <img src="https://i.pinimg.com/474x/17/be/fd/17befdb4a1944094d3db5444b4fcc8df.jpg" alt="" srcset="">
             </article>
         </section>
         <section class="flex-container">
             <article class="flex-item">
-                <h2>Titulo</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur explicabo consectetur tempore perspiciatis rerum ipsam, exercitationem quod autem eos. Commodi quo dolorum ratione iusto, enim rem quidem ducimus quaerat delectus?</p>
+                <h2>El aristogato en su trono de cristal</h2>
+                <p>Con una mirada de desaprobación digna de la realeza, este gato ha conquistado el bol de vidrio y lo ha convertido en su trono. No le importa que sea incómodo, porque la verdadera elegancia no conoce de obstáculos. Su lema: 'Si quepo, me siento superior.</p>
             </article>
             <article class="flex-item">
-                <img src="https://placekittens.com/500/450" alt="" srcset="">
+                <img src="https://cdn.eyeem.com/thumb/4f45b1cc02af8470a1eacf9f10bea3f25fe7f2ac-1652915000089/w/400" alt="" srcset="">
             </article>
+        </section>
+        <section class="flex-responsive">
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+        </section>
+
+        <section class="flex-responsive">
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
+            <article class="flex-responsive-item"></article>
         </section>
     </main>
 
@@ -179,4 +228,10 @@
     </footer>
 
 </body>
+<script>
+    const items = document.querySelectorAll('.flex-responsive-item');
+        function getRandomColor() {return '#' + Math.floor(Math.random() * 16777215).toString(16);}
+    items.forEach(item => {item.style.backgroundColor = getRandomColor();});
+    items.forEach(item => {item.style.border = `thin solid ${getRandomColor()}`});
+</script>
 </html>
