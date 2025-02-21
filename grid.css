@@ -72,28 +72,38 @@ html {
     grid-template-columns:repeat(5,20%);
     grid-template-rows:repeat(3,auto);
 
-    grid-template-columns:repeat(5,auto);
-    grid-template-rows:repeat(5,auto);
+    grid-template-columns:repeat(5,20%);
+    grid-template-rows:repeat(5,20%);
     grid-gap: 1vw 1vh;
   } 
  
+ 
+  
+  .grid-explicit :nth-child(10){  /* de esta manera definimos las dimensiones que va a ocupar un elemento dentro del grid*/
+    grid-row-start: 2;
+    grid-row-end: 3; 
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  .grid-explicit :nth-child(11){/* de esta manera definimos las dimensiones que va a ocupar un elemento dentro del grid, con la peculiaridad de que va a ocupar todo el ancho o todo el grosor respectivamente*/
+    grid-column:1 / span 3;
+    grid-row:1 / span 3;
+  }
   .grid-line-names {
-    display: grid;
-    /* Grid de 3cx3r */
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3] 1fr [linea-c4];
-    grid-template-rows: [linea-r1] 1fr [linea-r2] 1fr [linea-r3] 1fr [linea-r4];
-    grid-template-rows: [linea-r1] auto [linea-r2] auto [linea-r3] auto [linea-r4];
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr);
+    grid-template-columns:[linea-a] 1fr [linea-b] 1fr [linea-c] 1fr [linea-d] ;
+    grid-template-rows:[linea-a] 1fr [linea-b] 1fr [linea-c] 1fr [linea-d] ;
+    grid-template-columns:[linea-a] auto [linea-b] auto [linea-c] auto [linea-d] ;
+    grid-template-rows:[linea-a] auto [linea-b] auto [linea-c] auto [linea-d] ;
   }
-  
-  .grid-line-names .item:nth-child(3) {
-    color: cyan;
-    grid-row: linea-r3 / linea-r4;
-    grid-column: linea-c1 / linea-c4;
-    /* grid-area: linea-r3 / linea-r4 / linea-c1 / linea-c4; */
+
+  .grid-line-names :nth-child(3){
+    grid-column:linea-a / linea-c;
+    grid-row:linea-a / linea-c;
   }
-  
+
   .grid-areas {
     display: grid;
     /* Grid de 2cx3r */
@@ -105,7 +115,6 @@ html {
       "content  ."
       "footer     footer";
   }
-  
   .header {
     grid-area: header;
   }
