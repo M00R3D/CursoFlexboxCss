@@ -161,15 +161,15 @@ html {
     /* Grid de 5cx4r */
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 200px);
-    grid-auto-flow: row dense;
+    grid-auto-flow: row dense;/*para hacerlo denso es igual que el flow normal solo se le añde un espacio y la palabra dense*/
     grid-auto-flow: column dense;
   }
-  
-  /* .grid-flow-dense .item:nth-child(9) {
+  /* en este caso podemos decir que es la manera que tenemos de aprovechar el espacio sobrante en algunas ocasiones que reubicamos items con .item:nth-child */
+.grid-flow-dense .item:nth-child(9) {
     color: cyan;
     grid-row: span 3;
     grid-column: span 3;
-  } */
+  }
   
   .grid-flow-dense .item:nth-child(11) {
     color: cyan;
