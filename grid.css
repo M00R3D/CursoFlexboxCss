@@ -258,7 +258,13 @@ html {
   }
   
   .grid-align-tracks {
-
+    display: grid;
+    /* Grid de 3cx2r */
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 180px);
+    justify-content: start;
+    align-content:space-evenly;
+    justify-content:space-evenly;
   }
   
   .grid-min-max {
