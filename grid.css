@@ -207,8 +207,13 @@ html {
     grid-column: 3 / 5;
     grid-row: 3 / 5;
   }
-  /* aqui solo nos falta añadir el estilo del item 5, lo haremos en el siguiente push */
- 
+  /*grid css por defecto sobrepone ese elemento pero aqui incluso bajamos la opacidad para poder apreciar que esta una capa encima sobre los demas 4 anteriores elementos*/
+    .grid-layers .item:nth-child(5) {
+    background-color: #c92af0;
+    opacity: 0.75;
+    grid-column: 2 / 4;
+    grid-row: 2 / 4;
+  }
   
   .grid-order {
     display: grid;
@@ -234,22 +239,22 @@ html {
     display: grid;
     /* Grid de 3cx2r */
     grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(2, 200px);
+    grid-template-rows: repeat(2, 180px);
     /* justify-items alinea mis elementos grid en el eje horizontal (X) */
-    justify-items: stretch;
+    /* justify-items: stretch;
     justify-items: start;
-    justify-items: end;
+    justify-items: end; */
     justify-items: center;
     /* justify-items alinea mis elementos grid en el eje vertical (Y) */
-    align-items: stretch;
+    /* align-items: stretch;
     align-items: start;
-    align-items: end;
+    align-items: end; */
     align-items: center;
   }
   
   .grid-align .item:nth-child(4) {
-    justify-self: start;
-    align-self: start;
+    justify-self: end;
+    align-self: end;
   }
   
   .grid-align-tracks {
