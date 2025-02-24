@@ -141,15 +141,20 @@ html {
   }
   
   .grid-flow {
-    display: grid;
-    /* Grid de 5cx3r */
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 150px);
-    grid-auto-flow: row;
-    grid-auto-rows: 100px;
-    grid-auto-flow: column;
-    grid-auto-columns: 50px;
-  }
+    display: grid; /* Define el contenedor como un grid */
+
+    /* Crea una cuadrícula de 5 columnas por 3 filas */
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual tamaño */
+    grid-template-rows: repeat(3, 150px); /* 3 filas con una altura fija de 150px */
+
+    /* Configuración del flujo automático del grid */
+    grid-auto-flow: row; /* Los nuevos elementos se colocan por filas de forma predeterminada */
+    grid-auto-rows: 100px; /* Si se agregan más filas automáticamente, tendrán una altura de 100px */
+
+    grid-auto-flow: column; /*sobrescribe "grid-auto-flow: row;" */
+    grid-auto-columns: 50px; /* Si se agregan más columnas automáticamente, tendrán un ancho de 50px */
+}
+
   
   .grid-flow-dense {
     display: grid;
