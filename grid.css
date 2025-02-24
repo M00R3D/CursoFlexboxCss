@@ -270,7 +270,9 @@ html {
   .grid-min-max {
     display: grid;
     /* Grid de 4cx?r */
-    
+    grid-template-columns: repeat(4,1frl);
+    grid-template-columns: repeat(4,minmax(100px,200px));
+    /* hasta este punto definimos 4 columnas sin numero de finido de filas, y minimo 100 px de with, y maximo 200 px de with para cada columna */
   }
   
   .grid-repeat {
