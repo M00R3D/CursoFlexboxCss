@@ -293,11 +293,12 @@ html {
     /* Grid de 4cx?r */
     grid-template-columns: repeat(4, 100px);
     /* auto-fill Rellena la grid con tracks generados dinámicamente */
-    grid-template-columns: repeat(auto-fill, 100px);
+    grid-template-columns: repeat(auto-fill, 100px);/*SIMILAR A FLEX-SHRINK*/
     /* auto-fit Ajusta la grid con los tracks existentes */
-    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-columns: repeat(auto-fit, 100px);/*SIMILAR A FLEX-GROW*/
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   }
   
   .grid-responsive {
