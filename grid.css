@@ -279,11 +279,15 @@ html {
   }
   
   .grid-repeat {
-    display: grid;
-    /* Grid de 4cx4r */
-    
-  }
-  
+    display: grid; /* Define el contenedor como un grid */
+
+    /* Grid de 4 columnas por 4 filas */
+    grid-template-columns: repeat(4, 1fr);
+
+    /* repetir una vez el patrón de tamaños dentro de repeat() */
+    grid-template-columns: repeat(1, 10% 20% 30% 40%);
+    /* MUY IMPORTANTE, QUE repeat() solo es válido dentro de grid-template-columns y grid-template-rows para definir el grid explícito. */
+}
   .grid-dynamics {
     display: grid;
     /* Grid de 4cx?r */
