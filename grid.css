@@ -273,6 +273,9 @@ html {
     grid-template-columns: repeat(4,1frl);
     grid-template-columns: repeat(4,minmax(100px,200px));
     /* hasta este punto definimos 4 columnas sin numero de finido de filas, y minimo 100 px de with, y maximo 200 px de with para cada columna */
+    grid-template-columns: repeat(4,minmax(min-content,200px));
+    grid-template-columns: repeat(4,minmax(100px,max-content));
+    /* asi se define para que pueda llegar a medir como el minimo tamaño o maximo tamaño de contenido de los items */
   }
   
   .grid-repeat {
